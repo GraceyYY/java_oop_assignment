@@ -10,9 +10,9 @@ public class Student extends Person {
     public String introduce() {
         String output = super.introduce() + "I am a Student. ";
         if (this.stdClass.getLeader() == this) {
-            output = "I am Leader of Class " + this.stdClass.getNumber() + ".";
+            output = output + "I am Leader of Class " + this.stdClass.getNumber() + ".";
         } else {
-            output = "I am at Class " + this.stdClass.getNumber() + ".";
+            output = output + "I am at Class " + this.stdClass.getNumber() + ".";
         }
         return output;
     }

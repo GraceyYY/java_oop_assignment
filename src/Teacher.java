@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class Teacher extends Person {
     private Class[] classes;
 
@@ -23,8 +21,8 @@ public class Teacher extends Person {
             output = output + " I teach No Class";
         } else {
             String classNum = "Class ";
-            for (Class klass: this.classes) {
-                   classNum += klass.getNumber() + ",";
+            for (Class klass : this.classes) {
+                classNum += klass.getNumber() + ",";
             }
             classNum.substring(0, classNum.length() - 1);
             output = output + "I teach " + classNum;
@@ -39,5 +37,13 @@ public class Teacher extends Person {
             }
         }
         return false;
+    }
+
+    public String welcomeStudent(Student std) {
+        return "I am " + this.name + ". I know " + std.getName() + " has joined Class " + std.getStdClass().getNumber() + ".";
+    }
+
+    public String welcomLeader(Student std) {
+        return "I am " + this.name + ". I know " + std.getName() + " become Leader of Class " + std.getStdClass().getNumber() + ".";
     }
 }

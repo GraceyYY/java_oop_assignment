@@ -31,4 +31,13 @@ public class Teacher extends Person {
         }
         return output;
     }
+
+    public boolean isTeaching(Student std) {
+        for (Class klass : this.classes) {
+            if (klass.isIn(std)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

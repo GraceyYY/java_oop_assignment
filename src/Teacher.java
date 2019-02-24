@@ -1,18 +1,18 @@
 import java.util.Arrays;
 
 public class Teacher extends Person {
-    private int[] classes;
+    private Class[] classes;
 
-    public Teacher(String id, String name, int age, int[] classes) {
+    public Teacher(String id, String name, int age, Class[] classes) {
         super(id, name, age);
         this.classes = classes;
     }
 
-    public int[] getClasses() {
+    public Class[] getClasses() {
         return this.classes;
     }
 
-    public void setClasses(int[] classes) {
+    public void setClasses(Class[] classes) {
         this.classes = classes;
     }
 
@@ -22,8 +22,12 @@ public class Teacher extends Person {
         if (this.classes.length == 0) {
             output = output + " I teach No Class";
         } else {
-            String classes = Arrays.toString(this.classes);
-            output = output + "I teach Class" + classes.substring(1,classes.length()-1);
+            String classNum = "Class ";
+            for (Class klass: this.classes) {
+                   classNum += klass.getNumber() + ",";
+            }
+            classNum.substring(0, classNum.length() - 1);
+            output = output + "I teach " + classNum;
         }
         return output;
     }

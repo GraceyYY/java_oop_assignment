@@ -14,9 +14,12 @@ public class Test {
 
         Class[] cl1 = {c1, c2};
         Class[] cl2 = {c3, c4};
+        Class[] noClass = {};
 
         Teacher t1 = new Teacher("389", "cris", 30, cl1);
         Teacher t2 = new Teacher("726", "lee", 29, cl2);
+        Teacher t3 = new Teacher("193", "sue", 37, noClass);
+
         c1.setTeacher(t1);
         c2.setTeacher(t1);
         c3.setTeacher(t2);
@@ -32,5 +35,6 @@ public class Test {
 
         System.out.println(s1.introduce());
         System.out.println(t1.introduce());
+        System.out.println(t3.introduce());
     }
 }

@@ -15,7 +15,11 @@ public class Class {
     }
 
     public void assignLeader(Student leader) {
-        this.leader = leader;
+        if (leader.getStdClass() == this) {
+            this.leader = leader;
+        } else {
+            System.out.println("It is not one of us");
+        }
     }
 
     public void appendMember(Student std) {

@@ -25,4 +25,8 @@ public class Class {
     public void appendMember(Student std) {
         std.setStdClass(this);
     }
+
+    public boolean isIn(Student std) {
+        return std.getStdClass() == this;
+    }
 }

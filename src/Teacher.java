@@ -25,5 +25,6 @@ public class Teacher extends Person {
             String classes = Arrays.toString(this.classes);
             output = output + "I teach Class" + classes.substring(1,classes.length()-1);
         }
+        return output;
     }
 }

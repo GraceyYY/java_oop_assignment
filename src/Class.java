@@ -1,6 +1,7 @@
 public class Class {
     private int number;
     private Student leader;
+    private Teacher teacher;
 
     public Class(int number) {
         this.number = number;
@@ -14,6 +15,14 @@ public class Class {
         return this.leader;
     }
 
+    public Teacher getTeacher() {
+        return this.teacher;
+    }
+
+    public void setTeacher(Teacher teacher) {
+        this.teacher = teacher;
+    }
+
     public void assignLeader(Student leader) {
         if (leader.getStdClass() == this) {
             this.leader = leader;
@@ -24,6 +33,7 @@ public class Class {
 
     public void appendMember(Student std) {
         std.setStdClass(this);
+
     }
 
     public boolean isIn(Student std) {

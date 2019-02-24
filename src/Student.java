@@ -8,7 +8,13 @@ public class Student extends Person {
 
     @Override
     public String introduce() {
-        return super.introduce() + "I am a Student. I am at Class " + this.stdClass.getNumber() + ".";
+        String output = super.introduce() + "I am a Student. ";
+        if (this.stdClass.getLeader() == this) {
+            output = "I am Leader of Class " + this.stdClass.getNumber() + ".";
+        } else {
+            output = "I am at Class " + this.stdClass.getNumber() + ".";
+        }
+        return output;
     }
 
     public Class getStdClass() {

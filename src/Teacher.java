@@ -39,11 +39,15 @@ public class Teacher extends Person {
         return false;
     }
 
-    public String welcomeStudent(Student std) {
-        return "I am " + this.name + ". I know " + std.getName() + " has joined Class " + std.getStdClass().getNumber() + ".";
+    public void welcomeStudent(Student std) {
+        if (this.isTeaching(std)) {
+            System.out.println("I am " + this.name + ". I know " + std.getName() + " has joined Class " + std.getStdClass().getNumber() + ".");
+        }
     }
 
-    public String welcomLeader(Student std) {
-        return "I am " + this.name + ". I know " + std.getName() + " become Leader of Class " + std.getStdClass().getNumber() + ".";
+    public void welcomLeader(Student std) {
+        if (this.isTeaching(std)) {
+            System.out.println("I am " + this.name + ". I know " + std.getName() + " become Leader of Class " + std.getStdClass().getNumber() + ".");
+        }
     }
 }

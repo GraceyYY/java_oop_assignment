@@ -14,7 +14,7 @@ public class Class {
         return this.leader;
     }
 
-    public void setLeader(Student leader) {
+    public void assignLeader(Student leader) {
         this.leader = leader;
     }
 }

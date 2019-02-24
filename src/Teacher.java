@@ -18,14 +18,14 @@ public class Teacher extends Person {
     public String introduce() {
         String output = super.introduce() + "I am a Teacher.";
         if (this.classes.length == 0) {
-            output = output + " I teach No Class";
+            output = output + " I teach No Class.";
         } else {
             String classNum = "Class ";
             for (Class klass : this.classes) {
                 classNum += klass.getNumber() + ",";
             }
-            classNum.substring(0, classNum.length() - 1);
-            output = output + "I teach " + classNum;
+
+            output = output + "I teach " + classNum.substring(0, classNum.length() - 1) + ".";
         }
         return output;
     }

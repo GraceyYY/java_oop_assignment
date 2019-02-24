@@ -1,9 +1,8 @@
 public class Student extends Person {
     private Class stdClass;
 
-    public Student(String id, String name, int age, Class stdClass) {
+    public Student(String id, String name, int age) {
         super(id, name, age);
-        this.stdClass = stdClass;
     }
 
     @Override

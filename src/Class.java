@@ -17,4 +17,8 @@ public class Class {
     public void assignLeader(Student leader) {
         this.leader = leader;
     }
+
+    public void appendMember(Student std) {
+        std.setStdClass(this);
+    }
 }
